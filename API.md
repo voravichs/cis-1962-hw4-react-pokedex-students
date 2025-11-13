@@ -34,7 +34,7 @@ Get a paginated list of Pokemon.
 
 **Example Request**:
 ```
-GET https://cis1962-hw4-server.esinx.net/api/pokemon/?limit=10&offset=0
+GET https://hw4.cis1962.esinx.net/api/pokemon/?limit=10&offset=0
 ```
 
 #### Get Pokemon by Name
@@ -50,7 +50,7 @@ Get detailed information about a specific Pokemon.
 
 **Example Request**:
 ```
-GET https://cis1962-hw4-server.esinx.net/api/pokemon/pikachu
+GET https://hw4.cis1962.esinx.net/api/pokemon/pikachu
 ```
 
 ### Box Endpoints
@@ -70,7 +70,7 @@ Get a list of all Box entry IDs for the authenticated user.
 
 **Example Request**:
 ```
-GET https://cis1962-hw4-server.esinx.net/api/box/
+GET https://hw4.cis1962.esinx.net/api/box/
 Authorization: Bearer <JWT_TOKEN>
 ```
 
@@ -90,7 +90,7 @@ Create a new Box entry for the authenticated user.
 
 **Example Request**:
 ```
-POST https://cis1962-hw4-server.esinx.net/api/box/
+POST https://hw4.cis1962.esinx.net/api/box/
 Authorization: Bearer <JWT_TOKEN>
 Content-Type: application/json
 
@@ -119,7 +119,7 @@ Get a specific Box entry by ID.
 
 **Example Request**:
 ```
-GET https://cis1962-hw4-server.esinx.net/api/box/clx1234567890
+GET https://hw4.cis1962.esinx.net/api/box/clx1234567890
 Authorization: Bearer <JWT_TOKEN>
 ```
 
@@ -142,7 +142,7 @@ Update an existing Box entry. All fields are optional.
 
 **Example Request**:
 ```
-PUT https://cis1962-hw4-server.esinx.net/api/box/clx1234567890
+PUT https://hw4.cis1962.esinx.net/api/box/clx1234567890
 Authorization: Bearer <JWT_TOKEN>
 Content-Type: application/json
 
@@ -168,7 +168,7 @@ Delete a specific Box entry.
 
 **Example Request**:
 ```
-DELETE https://cis1962-hw4-server.esinx.net/api/box/clx1234567890
+DELETE https://hw4.cis1962.esinx.net/api/box/clx1234567890
 Authorization: Bearer <JWT_TOKEN>
 ```
 
@@ -185,7 +185,7 @@ Delete all Box entries for the authenticated user.
 
 **Example Request**:
 ```
-DELETE https://cis1962-hw4-server.esinx.net/api/box/
+DELETE https://hw4.cis1962.esinx.net/api/box/
 Authorization: Bearer <JWT_TOKEN>
 ```
 
@@ -304,19 +304,19 @@ The API uses standard HTTP status codes and returns error objects with the follo
 ### Get a list of Pokemon
 
 ```bash
-curl "https://cis1962-hw4-server.esinx.net/api/pokemon/?limit=10&offset=0"
+curl "https://hw4.cis1962.esinx.net/api/pokemon/?limit=10&offset=0"
 ```
 
 ### Get Pokemon details
 
 ```bash
-curl "https://cis1962-hw4-server.esinx.net/api/pokemon/pikachu"
+curl "https://hw4.cis1962.esinx.net/api/pokemon/pikachu"
 ```
 
 ### Create a Box entry
 
 ```bash
-curl -X POST "https://cis1962-hw4-server.esinx.net/api/box/" \
+curl -X POST "https://hw4.cis1962.esinx.net/api/box/" \
   -H "Authorization: Bearer YOUR_JWT_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -331,21 +331,21 @@ curl -X POST "https://cis1962-hw4-server.esinx.net/api/box/" \
 ### List user's Box entries
 
 ```bash
-curl "https://cis1962-hw4-server.esinx.net/api/box/" \
+curl "https://hw4.cis1962.esinx.net/api/box/" \
   -H "Authorization: Bearer YOUR_JWT_TOKEN"
 ```
 
 ### Get a specific Box entry
 
 ```bash
-curl "https://cis1962-hw4-server.esinx.net/api/box/clx1234567890" \
+curl "https://hw4.cis1962.esinx.net/api/box/clx1234567890" \
   -H "Authorization: Bearer YOUR_JWT_TOKEN"
 ```
 
 ### Update a Box entry
 
 ```bash
-curl -X PUT "https://cis1962-hw4-server.esinx.net/api/box/clx1234567890" \
+curl -X PUT "https://hw4.cis1962.esinx.net/api/box/clx1234567890" \
   -H "Authorization: Bearer YOUR_JWT_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -357,13 +357,13 @@ curl -X PUT "https://cis1962-hw4-server.esinx.net/api/box/clx1234567890" \
 ### Delete a Box entry
 
 ```bash
-curl -X DELETE "https://cis1962-hw4-server.esinx.net/api/box/clx1234567890" \
+curl -X DELETE "https://hw4.cis1962.esinx.net/api/box/clx1234567890" \
   -H "Authorization: Bearer YOUR_JWT_TOKEN"
 ```
 
 ### Clear all Box entries
 
 ```bash
-curl -X DELETE "https://cis1962-hw4-server.esinx.net/api/box/" \
+curl -X DELETE "https://hw4.cis1962.esinx.net/api/box/" \
   -H "Authorization: Bearer YOUR_JWT_TOKEN"
 ```
